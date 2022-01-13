@@ -1,3 +1,3 @@
-# modul6-deployment
+# Deepfake Detection Deployment
 
-https://diabeticplantarthermogram.herokuapp.com
+web : https://diabeticplantarthermogram.herokuapp.com
