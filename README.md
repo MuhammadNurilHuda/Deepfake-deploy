@@ -1,3 +1,5 @@
 # Deepfake Detection Deployment
 
-web : https://diabeticplantarthermogram.herokuapp.com
+web : https://detect-deepfake.herokuapp.com/
+
+nb : model densenet tidak bisa digunakan karena size terlalu besar
