@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Deepfake Detection</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Stylesheets Form -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ url_for('static', filename='main/images/favicon2.ico') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='form/vendor/bootstrap/css/bootstrap.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='form/fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='form/fonts/iconic/css/material-design-iconic-font.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='form/vendor/animate/animate.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='form/vendor/css-hamburgers/hamburgers.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='form/vendor/animsition/css/animsition.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='form/vendor/select2/select2.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='form/vendor/daterangepicker/daterangepicker.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='form/css/util.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='form/css/main.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='main/css/test.css') }}"
+    />
+
+    <!-- Stylesheets -->
+    <link
+      href="{{ url_for('static', filename='main/css/style.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='main/css/responsive.css') }}"
+      rel="stylesheet"
+    />
+
+    <style>
+      #myProgress {
+        width: 70%;
+        background-color: #ddd;
+      }
+
+      #myBar {
+        width: 0%;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        color: white;
+        background-color: #ff1111;
+      }
+    </style>
+    <style>
+      @media screen and (max-width: 1024px) {
+        .hideAndSeekElementMax {
+          display: none;
+        }
+      }
+      @media screen and (min-width: 1024px) {
+        .header-top {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <!-- page wrapper -->
+  <body class="boxed_wrapper" onload="move()">
+    {% block content %}{% endblock %}
+
+    <!--Scroll to top-->
+    <button class="scroll-top scroll-to-target" data-target="html">
+      <span class="fa fa-angle-up"></span>
+    </button>
+
+    <script>
+      var i = 0;
+      function move() {
+        var number = document.getElementById("probability").value;
+        if (i == 0) {
+          i = 1;
+          var elem = document.getElementById("myBar");
+          var width = 0;
+          var id = setInterval(frame, 10);
+          function frame() {
+            if (width >= number) {
+              clearInterval(id);
+              i = 0;
+            } else {
+              width++;
+              elem.style.width = width + "%";
+              elem.innerHTML = width + "%";
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- jequery plugins -->
+    <script src="{{ url_for('static', filename='main/js/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='main/js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='main/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='main/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='main/js/wow.js') }}"></script>
+    <script src="{{ url_for('static', filename='main/js/validation.js') }}"></script>
+    <script src="{{ url_for('static', filename='main/js/isotope.js') }}"></script>
+    <!-- <script src="{{ url_for('static', filename='js/html5lightbox/html5lightbox.js') }}"></script> -->
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='main/js/SmoothScroll.js') }}"
+    ></script>
+
+    <!-- map script -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBevTAR-V2fDy9gQsQn1xNHBPH2D36kck0"></script>
+    <script src="{{ url_for('static', filename='main/js/gmaps.js') }}"></script>
+    <script src="{{ url_for('static', filename='main/js/map-helper.js') }}"></script>
+
+    <!-- main-js -->
+    <script src="{{ url_for('static', filename='main/js/script.js') }}"></script>
+
+    <!-- test js -->
+    <script src="{{ url_for('static', filename='main/js/test.js') }}"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </body>
+  <!-- End of .page_wrapper -->
+</html>
