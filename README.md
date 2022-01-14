@@ -13,6 +13,7 @@ Tampilan awal akan seperti gambar diatas
 - Pilih model yang akan digunakan. Saat ini terdapat 2 model, yaitu Densenet* dan Mobilenet V2
 
 ![App Screenshot](https://github.com/MuhammadNurilHuda/Deepfake-deploy/blob/main/assets/select_model.jpg)
+
 *Model Densenet tidak di deploy karena size terlalu besar
 
 
