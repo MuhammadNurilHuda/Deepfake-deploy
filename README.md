@@ -1,5 +1,7 @@
 # Deepfake Detection Deployment
 
+Prototype Deployment Final Project untuk Studi independen Orbit Future Academy
+
 
 ## How to use ?
 
